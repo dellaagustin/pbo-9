@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action='.' method='POST'>{% csrf_token %}
+    <h1>Apakah Anda yakin mau menghapus "{{ object.title }}"?</h1>
+    <p><input type='submit' value='Ya' />  <a href='../'>Batal</a></p>
+
+</form>
+
+{% endblock %}
